@@ -1,0 +1,78 @@
+#user-edit-page{
+  width:100%;
+  height:100vh;
+  background-color: rgb(243, 243, 243);
+
+  #user-edit-form{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    font-family: NetflixSansLight;
+    color: rgb(51,51,51);
+
+    p {
+      margin-bottom: 1vh;
+      font-size: 3vh;
+    }
+
+    input {
+      box-sizing: border-box;
+      font-size: 1.5vh;
+      padding: 1vh;
+      margin: 2.2vh 0;
+      max-width: 500px;
+      width: 90vw;
+
+      &:focus{
+        outline: 1px solid rgb(3, 154, 204);
+        border: none;
+      }
+    }
+
+    button {
+      margin-right: 3px;
+      width: 100px;
+      height: 30px;
+    }
+
+    .error{
+      color: #b92d2b;
+      font-size: 13px;
+      position: relative;
+      margin-bottom: 0;
+      margin-top: -20px;
+
+    }
+
+    .invalid{
+      border: 1px solid #b92d2b;
+    }
+
+  }
+
+  @keyframes popup {
+    from{
+      bottom: 0px;
+    }
+    to{
+      bottom: 100px;
+    }
+  }
+
+  #save-confirmation{
+    position:absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%,-50%);
+    background-color: #5fa53f;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-family: NetflixSansLight;
+    font-size: 15px;
+    color: white;
+    animation: popup .3s;
+  }
+}

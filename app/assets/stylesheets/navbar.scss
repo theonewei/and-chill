@@ -1,0 +1,287 @@
+@import 'variables';
+
+header.at-top{
+  background-color: transparent;
+}
+
+.nav-bar {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: $netflix-background;
+  transition: background-color 1s;
+  width: 100vw;
+  padding: 11px;
+  * {
+    font-family: NetflixSansMedium;
+    font-size: 14px;
+    color: $netflix-text;
+    display: flex;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  
+  .nav-bar-left{
+    margin-left: 3vw;
+
+    .nav-logo{
+      width:5vw;
+      height: 2vw;
+    }
+
+    .nav-left-btns{
+      margin-left: 30px;
+      * {
+        text-decoration: none;
+        padding: 15px;
+      }
+    }
+  }
+
+  .nav-bar-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+    margin-right: 60px;
+
+
+    #search {
+      display: flex;
+      justify-content: flex-end;
+      // position: relative;
+      margin-right: 1vw;
+      margin-top: .3vh;
+      height: 30px;
+      width: 100%;
+    
+      #search-input-closed{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        height: 10px;
+        width: 10px;
+        margin-right: 2vw;
+        #search-icon{
+          position: absolute;
+          left: 10%;
+            width: 30px;
+            height: 30px;
+            #circle{
+              position: absolute;
+              top: 15%;
+              left: 15%;
+              width: 10px;
+              height: 10px;
+              border: 3px solid $netflix-text;
+              border-radius: 50%;
+            }
+            #handle{
+              position: absolute;
+              top: 47%;
+              left: 61%;
+              width: 3px;
+              height: 9px;
+              transform: rotate(-50deg);
+              background: $netflix-text;
+              border-radius: 5px;
+              z-index: 2;
+            }
+          }
+        
+      }
+
+      #search-input-open{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        width: 40px;
+        height: 10px;
+        #search-icon{
+          position: absolute;
+          z-index: 1;
+          left: 10%;
+            width: 30px;
+            height: 30px;
+            #circle{
+              position: absolute;
+              top: 15%;
+              left: 15%;
+              width: 10px;
+              height: 10px;
+              border: 3px solid $netflix-text;
+              border-radius: 50%;
+            }
+            #handle{
+              position: absolute;
+              top: 47%;
+              left: 61%;
+              width: 3px;
+              height: 9px;
+              transform: rotate(-50deg);
+              background: $netflix-text;
+              border-radius: 5px;
+            }
+          }
+        input{
+          position: absolute;
+          padding: 5px 0;
+          width: 248px;
+          background-color: black;
+          border: 1px solid $netflix-text;
+        }
+      }
+
+      #results-container {
+        display: inline-block;
+        width: 1px;
+        #search-results{
+          position: absolute;
+          width: 250px;
+          margin-top: 15px;
+          margin-left: -252px;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          background-color: $netflix-background;
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
+
+          li{
+            padding: 10px;
+            border-top: 1px solid rgb(104, 104, 104);
+            width: 92%;
+            font-family: NetflixSansLight;
+            &:hover{
+              background-color: rgb(44, 44, 44);
+            }
+            
+          }
+  
+          img{
+            height: 27px;
+            width: 48px;
+            margin-right: 10px;
+          }
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    #nav-right-btns {
+      display: flex;
+      justify-content: space-between;
+      // width: 20vw;
+      // margin-right: 60px;
+      * {
+        background-color: transparent;
+      }
+
+      .nav-profiles{
+        text-decoration: none;
+        padding: 4px;
+        margin-right: 20px;
+      }
+
+      button {
+        margin-left: 15px;
+        border: none;
+      }
+
+    }
+
+    
+
+    #dropdown {
+      position: relative;
+      display: inline-block;
+      margin-right: 2vw;
+      padding: 10px;
+
+      &:hover {
+        #tri2{
+          transform: rotate(180deg);
+        }
+      }
+
+      #tri2{
+        position: absolute;
+        z-index: 1;
+        border-top: 5px solid white;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        width: 0;
+        height: 0;
+        margin-left: 35px;
+        margin-top: 10px;
+        transition: transform .25s;
+      }
+
+      
+
+      img{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    
+      }
+      
+      #dropdown-content{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-left: -130px;
+        flex-direction: column;
+        width: 170px;
+        background-color: rgba(0, 0, 0, 0.9);
+        border: 1px solid rgb(41, 41, 41);
+        box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
+
+        #triangle {
+          position: absolute;
+          z-index: 1;
+          border-bottom: 5px solid white;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          width: 0;
+          height: 0;
+          margin-top: -7px;
+          margin-left: 137px;
+        }
+
+        li{
+          position:relative;
+          padding: 10px;
+        }
+
+        a,p{
+          padding: 10px;
+          text-decoration: none;
+        }
+
+        #line{
+          width: 170px;
+          border-top: 1px solid rgb(107, 107, 107);
+        }
+
+        &> *{
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &:hover #dropdown-content{
+        display: flex; 
+      }
+      
+    }
+  }
+}

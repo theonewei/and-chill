@@ -1,0 +1,14 @@
+@import 'variables';
+
+#my-video-index{
+  position:absolute;
+  top: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vw;
+
+  .video-item{
+    margin: 2vw .5vw;
+  }
+  
+}

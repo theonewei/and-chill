@@ -1,0 +1,117 @@
+
+@import 'variables';
+
+.splash-logo {
+  padding-left: 28px;
+  padding-top: 18px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+
+.login-modal-content {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 50px;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 350px;
+  font-family: NetflixSansMedium;
+  color: white;
+    
+  h1,input,button {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    display: flex;
+    align-items: stretch;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    padding-top:20px;
+    margin-bottom: 35px;
+    background-color: #333333;
+    border: none;
+    &:focus{
+      background-color: #3f3f3f;
+      outline: none;
+    }
+    &::placeholder{
+      color: rgb(143, 143, 143)
+    }
+
+  }
+
+  h1 {
+    padding-bottom: 20px;
+  }
+
+  
+
+  .login{
+    margin-top: 10px;
+  }
+
+  p {
+    font-weight: 5000;
+    color: #B3B3B3;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  
+  .invalid {
+    border-bottom: 2px solid #e87c03;
+  }
+
+  .error {
+    position: relative;
+    font-family: NetflixSansLight;
+    color: #e87c03;
+    padding-top: 0;
+    margin-top: -35px;
+  }
+
+  button {
+    margin-top: 20px;
+    background-color: $netflix-red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 80px;
+    &:hover{
+      background-color: #f7252f;
+      cursor: pointer;
+    }
+  }
+
+  .demo-btn {
+    margin-top: -60px;
+  }
+}
