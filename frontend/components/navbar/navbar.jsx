@@ -56,6 +56,9 @@ class NavBar extends React.Component {
           <div className="nav-left-btns">
             <Link to="/videos">Home</Link>
             <Link to="/mylist">My List</Link>
+            <a href="https://github.com/theonewei">Github</a>
+            <a href="https://www.linkedin.com/in/isaac-wei-9945a2105/">LinkedIn</a>
+            <a href="https://angel.co/u/isaac-wei">AngleList</a>
           </div>
         </div>
 
