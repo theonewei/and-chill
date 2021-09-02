@@ -92,7 +92,7 @@ const UserEditForm = props => {
         <p>Update Information</p>
         <input type="text" value={email} className={isValidEmail} onChange={_handleUpdate('email')} />
         {emailError}
-        <input type='text' value={password} className={isValidOld} placeholder='Previous Password' onChange={_handleUpdate('old password')} />
+        <input type='password' value={password} className={isValidOld} placeholder='Previous Password' onChange={_handleUpdate('old password')} />
         {oldPasswordError}
 
         <input type='password' value={newPassword} placeholder='New Password' className={isValidNew} onChange={_handleUpdate('new password')} />
