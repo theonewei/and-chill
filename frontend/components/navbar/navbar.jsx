@@ -56,6 +56,7 @@ class NavBar extends React.Component {
           <div className="nav-left-btns">
             <Link to="/videos">Home</Link>
             <Link to="/mylist">My List</Link>
+            <a rel="noopener noreferrer" target='_blank' href="https://isaacwei.dev/#home">Portfolio</a>
             <a rel="noopener noreferrer" target='_blank' href="https://github.com/theonewei">Github</a>
             <a rel="noopener noreferrer" target='_blank' href="https://www.linkedin.com/in/isaac-wei-9945a2105/">LinkedIn</a>
             <a rel="noopener noreferrer" target='_blank' href="https://angel.co/u/isaac-wei">AngelList</a>
